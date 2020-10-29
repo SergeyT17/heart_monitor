@@ -43,10 +43,7 @@
         }
     }
     .advantages {
-        &__header {
-            font-size: 22px;
-            margin-bottom: 35px;
-        }
+
         &__icon {
             width: 215px;
             font-size: 12px;
@@ -105,10 +102,6 @@
     }
     .advantages {
         padding:35px 0 60px 0;
-        &__header {
-            font-size: 22px;
-            margin-bottom: 35px;
-        }
         &__icon {
             width: 215px;
             font-size: 12px;
@@ -172,10 +165,6 @@
     }
     .advantages {
         padding:35px 0 60px 0;
-        &__header {
-            font-size: 17px;
-            margin-bottom: 35px;
-        }
         &__icons {
             flex-direction: column;
             align-items: center;
