@@ -25,3 +25,19 @@
        
     }
 }
+
+@media (max-width: 991px) {
+    .feed-form{
+        input {
+            height: 30px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .feed-form{
+        width: 290px;
+        input {
+            height: 30px;
+        }
+    }
+}

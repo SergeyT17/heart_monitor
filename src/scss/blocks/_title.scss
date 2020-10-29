@@ -16,17 +16,26 @@
     .title {
         font-size: 22px;
         margin-bottom: 35px;
+        &_left {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
     }
 }
 @media (max-width: 767px) {
     .title {
         font-size: 22px;
         margin-bottom: 35px;
+        &_left {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
     }
 }
 @media (max-width: 575px) {
     .title {
         font-size: 17px;
         margin-bottom: 35px;
+        text-align: center;
     }
 }

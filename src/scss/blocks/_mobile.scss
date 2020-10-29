@@ -1,6 +1,6 @@
 @media (max-width: 991px) {
     .container {
-        max-width: 800px !important;
+        max-width: 679px;
     }
     .header {
         &__logo {
@@ -37,13 +37,8 @@
         &__link {
             font-size: 16px;
         }
-        .button_main {
-            margin-top: 40px;
-            font-size: 10px;
-        }
     }
     .advantages {
-
         &__icon {
             width: 215px;
             font-size: 12px;
@@ -53,18 +48,24 @@
             }
         }
     }
+    .consultation {
+        padding: 50px 0 48px 0;
+        &__descr {
+            font-size: 15px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
     .container {
-        max-width: 675px !important;
+        max-width: 505px;
     }
     .header {
         &__logo {
             width: 200px;
         }
         &__official {
-            font-size: 12px;
+            display: none;
             span {
                 font-size: 16px;
             }
@@ -95,10 +96,6 @@
         &__link {
             font-size: 14px;
         }
-        .button_main {
-            margin-top: 40px;
-            font-size: 9px;
-        }
     }
     .advantages {
         padding:35px 0 60px 0;
@@ -115,14 +112,11 @@
 
 @media (max-width: 575px) {
     .container {
-        max-width: 290px !important;
+        max-width: 290px;
     }
     .header {
         &__logo {
             width: 160px;
-        }
-        &__official {
-            display: none;
         }
         &__phone {
            font-size: 12px; 
@@ -131,6 +125,9 @@
     .promo {
         min-height: 573px;
         padding-bottom: 70px;
+        &__wrapper {
+            align-items: center;
+        }
         &__header {
             font-size: 20px;
         }
@@ -153,14 +150,10 @@
         }
         &__link {
             font-size: 12px;
-        }
-        .button_main {
-            margin: 0 auto;
-            margin-top: 20px;
-            font-size: 8px;
-            width: 130px;
-            height: 19px;
-            margin-bottom: 15px;
+            text-align: center;
+            a {
+                display: block;
+            }
         }
     }
     .advantages {
@@ -180,6 +173,11 @@
                 font-size: 15px;
                 margin: 10px 0 5px 0;
             }
+        }
+    }
+    .consultation {
+        &__descr {
+            text-align: center;
         }
     }
 }

@@ -1,18 +1,18 @@
 * {
     font-family: 'Museo', sans-serif;
 }
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
 @import 'base/mixin';
 @import 'base/variables';
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/advantages';
-@import 'blocks/mobile';
 @import 'blocks/consultation';
 @import 'blocks/title';
 @import 'blocks/forms';
-
-.container {
-    max-width: 950px;
-    margin: 0 auto;
-}
+@import 'blocks/mobile';
