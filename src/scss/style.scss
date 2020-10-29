@@ -1,0 +1,15 @@
+* {
+    font-family: 'Museo', sans-serif;
+}
+@import 'base/mixin';
+@import 'base/variables';
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/mobile';
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}

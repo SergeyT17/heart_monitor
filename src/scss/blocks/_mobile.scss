@@ -1,0 +1,196 @@
+@media (max-width: 991px) {
+    .container {
+        max-width: 800px !important;
+    }
+    .header {
+        &__logo {
+            width: 215px;
+        }
+        &__official {
+            font-size: 14px;
+            span {
+                font-size: 18px;
+            }
+        }
+        &__phone {
+           font-size: 16px; 
+        }
+    }
+    .promo {
+        min-height: 573px;
+        &__header {
+            font-size: 35px;
+        }
+        &__subheader {
+            font-size: 17px;
+        }
+        &__icons {
+            width: 425px;
+            margin-top: 50px;
+        }
+        &__icon {
+            font-size: 14px;
+            img {
+                margin-bottom: 10px;
+            }
+        }
+        &__link {
+            font-size: 16px;
+        }
+        .button_main {
+            margin-top: 40px;
+            font-size: 10px;
+        }
+    }
+    .advantages {
+        &__header {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+        &__icon {
+            width: 215px;
+            font-size: 12px;
+            span {
+                font-size: 16px;
+                margin: 20px 0 14px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 675px !important;
+    }
+    .header {
+        &__logo {
+            width: 200px;
+        }
+        &__official {
+            font-size: 12px;
+            span {
+                font-size: 16px;
+            }
+        }
+        &__phone {
+           font-size: 14px; 
+        }
+    }
+    .promo {
+        min-height: 573px;
+        &__header {
+            font-size: 30px;
+        }
+        &__subheader {
+            font-size: 15px;
+        }
+        &__icons {
+            width: 390px;
+            margin-top: 50px;
+        }
+        &__icon {
+            font-size: 11px;
+            img {
+                height: 45%;
+                margin-bottom: 10px;
+            }
+        }
+        &__link {
+            font-size: 14px;
+        }
+        .button_main {
+            margin-top: 40px;
+            font-size: 9px;
+        }
+    }
+    .advantages {
+        padding:35px 0 60px 0;
+        &__header {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+        &__icon {
+            width: 215px;
+            font-size: 12px;
+            span {
+                font-size: 16px;
+                margin: 20px 0 14px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 290px !important;
+    }
+    .header {
+        &__logo {
+            width: 160px;
+        }
+        &__official {
+            display: none;
+        }
+        &__phone {
+           font-size: 12px; 
+        }
+    }
+    .promo {
+        min-height: 573px;
+        padding-bottom: 70px;
+        &__header {
+            font-size: 20px;
+        }
+        &__subheader {
+            font-size: 10px;
+        }
+        &__icons {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+        &__icon {
+            font-size: 10px;
+            margin-bottom: 20px;
+            img {
+                height: 35px;
+                margin-bottom: 10px;
+            }
+        }
+        &__link {
+            font-size: 12px;
+        }
+        .button_main {
+            margin: 0 auto;
+            margin-top: 20px;
+            font-size: 8px;
+            width: 130px;
+            height: 19px;
+            margin-bottom: 15px;
+        }
+    }
+    .advantages {
+        padding:35px 0 60px 0;
+        &__header {
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+        &__icons {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon {
+            width: 215px;
+            font-size: 11px;
+            padding-bottom: 25px;
+            img {
+                height: 60px;
+            }
+            span {
+                font-size: 15px;
+                margin: 10px 0 5px 0;
+            }
+        }
+    }
+}
