@@ -17,16 +17,17 @@ function browsersync() {
     })
 }
 
-// function scripts() {
-//     return src([
-//         'node_modules/jquery/dist.jquery.min.js'
-//         'src/js/app.js',
-//     ])
-//     .pipe(concat('app.min.js'))
-//     .pipe(uglify())
-//     .pipe(dest('src/js/')
-//     .pipe(browserSync.stream())
-// }
+function scripts() {
+    return src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'src/js/slick.min.js',
+        'src/js/scripts.js',
+    ])
+    .pipe(concat('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(dest('src/js/'))
+    .pipe(browserSync.stream())
+}
 
 function styles() {
     return src('src/scss/style.scss')
@@ -53,7 +54,7 @@ function startwatch() {
     watch('src/**/*.scss', styles);
     watch('src/**/*.html').on('change', browserSync.reload);
     watch('src/img/original/**/*', images);
-    // watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
+    watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
 }
 
 function buildcopy() {
@@ -62,20 +63,17 @@ function buildcopy() {
         'src/image/optimized/**/*',
         'src/fonts/*',
         'src/icons/*.png',
-        'src/**/*.html'
-         // 'src/js/**/*.min.js',
+        'src/**/*.html',
+        'src/js/**/*.min.js',
     ], { base: 'src'})
     .pipe(dest('dist'))
 }
 
-// exports.scripts  = scripts;
 exports.browsersync = browsersync;
+exports.scripts     = scripts;
 exports.styles      = styles;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
-exports.buildcopy   = series(styles, images, buildcopy);
+exports.buildcopy   = series(styles, scripts, images, buildcopy);
 
-exports.default     = parallel( styles, browsersync, startwatch); 
-//когда подключишь js сюда не забудь добавить
-
-
+exports.default     = parallel(styles, scripts, browsersync, startwatch); 
