@@ -21,5 +21,57 @@
         right: -66px;
         left: auto;
     }
+    .slick-dots {
+        padding-left: 0;
+    }
 }
 
+@media (max-width: 991px) {
+    .carousel {
+        &__inner {
+            width: 500px;
+            img {
+                width: 100%;
+            }
+        }
+        .slick-dots {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style-type: none;
+            li{
+                padding: 5px;
+            }
+            button {
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                font-size: 0;
+                outline: none;
+                background: #fff;
+            }
+        }
+        .slick-active {
+            button {
+                background-color: red;
+                transition: background-color .3s linear;
+                &:hover {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .carousel {
+        &__inner {
+            width: 270px;
+        }
+        .slick-dots {
+            li {
+                padding: 3px;
+            }
+        }
+    }
+}
