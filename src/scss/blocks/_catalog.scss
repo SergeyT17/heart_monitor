@@ -165,3 +165,25 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    .catalog {
+        &__tabs {
+            margin-top: 40px;
+            flex-direction: column;
+        }
+        &__tab {
+            width: 200px;
+            height: 40px;
+            line-height: 38px;
+            font-size: 15px;
+            margin: 5px 0;
+        }
+        &__content {
+            margin-top: 40px;
+        }
+        &-item {
+            min-height: 330px;
+        }
+    }
+}
