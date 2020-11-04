@@ -63,9 +63,14 @@
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
     .carousel {
         padding-bottom: 40px;
+    }
+} 
+
+@media (max-width: 575px) {
+    .carousel {
         &__inner {
             width: 270px;
         }
