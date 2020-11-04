@@ -36,6 +36,18 @@
     }
 }
 
+@media (max-width: 767px) {
+    .reviews {
+        &-item {
+            &__text {
+                &_descr {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .reviews {
         &-item {
@@ -50,6 +62,7 @@
                 margin-right: 0;
             }
             &__text {
+                margin-bottom: 50px;
                 &_descr {
                     font-size: 13px;
                     text-align: left;
