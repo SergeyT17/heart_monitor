@@ -62,11 +62,12 @@ function startwatch() {
 function buildcopy() {
     return src([
         'src/css/**/*.min.css',
-        'src/image/optimized/**/*',
+        'src/img/optimized/**/*',
         'src/fonts/*',
         'src/icons/*.png',
         'src/**/*.html',
         'src/js/**/*.min.js',
+        'src/mailer/**/*'
     ], { base: 'src'})
     .pipe(dest('dist'))
 }
