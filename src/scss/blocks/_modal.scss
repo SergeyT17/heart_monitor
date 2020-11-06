@@ -39,6 +39,14 @@
     &_mini {
         min-height: 140px;
     }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        border: none;
+        margin-bottom: 15px;
+        text-align: center;
+    }
 }
 
 #consultation, #order, #thanks {
@@ -59,6 +67,9 @@
         &__close {
             right: -27px;
             font-size: 30px;
+        }
+        label.error {
+            font-size: 14px;
         }
     }
 }
@@ -96,6 +107,9 @@
         &__close {
             right: -27px;
             font-size: 30px;
+        }
+        label.error {
+            font-size: 12px;
         }
     }
 }

@@ -8,4 +8,37 @@
         text-align: left;
         color: #ffffff;
     }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        color: #fff;
+        border: none;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .consultation {
+        padding: 50px 0 48px 0;
+        &__descr {
+            font-size: 15px;
+        }
+        label.error {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .consultation {
+        min-height: 550px;
+        &__descr {
+            text-align: center;
+        }
+        label.error {
+            font-size: 12px;
+        }
+    }
 }

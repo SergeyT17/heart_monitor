@@ -35,3 +35,48 @@
         align-items: flex-end
     }
 }
+
+@media (max-width: 991px) {
+    .header {
+        &__logo {
+            width: 215px;
+        }
+        &__official {
+            font-size: 14px;
+            span {
+                font-size: 18px;
+            }
+        }
+        &__phone {
+           font-size: 16px; 
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__logo {
+            width: 200px;
+        }
+        &__official {
+            display: none;
+            span {
+                font-size: 16px;
+            }
+        }
+        &__phone {
+           font-size: 14px; 
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &__logo {
+            width: 160px;
+        }
+        &__phone {
+           font-size: 12px; 
+        }
+    }
+}
