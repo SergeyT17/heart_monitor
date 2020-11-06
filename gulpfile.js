@@ -21,6 +21,7 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         'src/js/jquery.validate.min.js',
+        'src/js/jquery.maskedinput.min.js',
         'src/js/slick.min.js',
         'src/js/scripts.js',
     ])
