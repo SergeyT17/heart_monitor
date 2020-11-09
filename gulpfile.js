@@ -23,6 +23,7 @@ function scripts() {
         'src/js/jquery.validate.min.js',
         'src/js/jquery.maskedinput.min.js',
         'src/js/slick.min.js',
+        'src/js/wow.min.js',
         'src/js/scripts.js',
     ])
     .pipe(concat('scripts.min.js'))

@@ -12,7 +12,12 @@
         text-align: center;
         color: #0d0d0d;
         width: 239px;
+        &_animation {
+            animation: heartbeat 1.5s ease infinite;
+        }
         img {
+            width: 70px;
+            height: 70px;
             display: block;
             margin: 0 auto;
         }
