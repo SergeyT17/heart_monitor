@@ -9,12 +9,19 @@ const imagemin     = require('gulp-imagemin');
 const newer        = require('gulp-newer');
 const del          = require('del');
 const uglify       = require('gulp-uglify-es').default;
+const htmlmin         = require('gulp-htmlmin');
 
 function browsersync() {
     browserSync.init({
         server: { baseDir: "src/" },
         notify: false,
     })
+}
+
+function html() {
+    return src('src/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('dist'))
 }
 
 function scripts() {
@@ -33,7 +40,10 @@ function scripts() {
 }
 
 function styles() {
-    return src('src/scss/style.scss')
+    return src([
+        'src/scss/libs/*.css',
+        'src/scss/style.scss'
+    ])
     .pipe(sass())
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 7 versions'], grid: true }))
@@ -53,11 +63,16 @@ function cleanimg() {
     return del('src/img/optimized/**/*', {force: true})
 }
 
+function cleandist() {
+    return del(['dist', '!dist/*.html'], {force: true})
+}
+
 function startwatch() {
     watch('src/**/*.scss', styles);
     watch('src/**/*.html').on('change', browserSync.reload);
     watch('src/img/original/**/*', images);
-    watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
+    watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
+    watch('src/**/*.html', html);
 }
 
 function buildcopy() {
@@ -66,7 +81,6 @@ function buildcopy() {
         'src/img/optimized/**/*',
         'src/fonts/*',
         'src/icons/*.png',
-        'src/**/*.html',
         'src/js/**/*.min.js',
         'src/mailer/**/*'
     ], { base: 'src'})
@@ -74,10 +88,12 @@ function buildcopy() {
 }
 
 exports.browsersync = browsersync;
+exports.html        = html;
 exports.scripts     = scripts;
 exports.styles      = styles;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
-exports.buildcopy   = series(styles, scripts, images, buildcopy);
+exports.cleandist   = cleandist;
+exports.buildcopy   = series(cleandist, html, styles, scripts, images, buildcopy);
 
 exports.default     = parallel(styles, scripts, browsersync, startwatch); 

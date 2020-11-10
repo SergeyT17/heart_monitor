@@ -149,19 +149,29 @@
                     left: -14px;
                     top: 7px;
                 }
+                &:last-child {
+                    position: absolute;
+                    left: 45%;
+                    transform: translateX(-45%);
+                    top: 93%;
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                    }
+                }
             }
         }
         &__back {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(calc(-50% - 19px));
             display: block;
             font-size: 14px;
             font-weight: 500;
             color: $main-color;
             text-transform: uppercase;
             text-decoration: underline;
+            &:active {
+                color: $main-color;
+            }
         }
     }
 }
